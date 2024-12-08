@@ -1,0 +1,183 @@
+[gd_scene load_steps=5 format=3 uid="uid://cjafncj45mr7j"]
+
+[ext_resource type="Texture2D" uid="uid://dhaksjd6ne8xp" path="res://Assets/Splash/kinghardskeleton.png" id="1_pyj4i"]
+[ext_resource type="FontFile" uid="uid://dt0x78pria4e" path="res://Assets/Font/Destruction Manual.otf" id="2_h0ked"]
+[ext_resource type="Texture2D" uid="uid://clld8uwp7216n" path="res://Assets/Interfaz/Icon.png" id="3_os52l"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hvm6r"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0, 0, 0, 0.588235)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+corner_detail = 2
+anti_aliasing = false
+anti_aliasing_size = 5.814
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 0.960784, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -369.0
+offset_top = 64.0
+offset_right = 369.0
+offset_bottom = 287.0
+grow_horizontal = 2
+texture = ExtResource("1_pyj4i")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -261.0
+offset_top = -309.0
+offset_right = 261.0
+offset_bottom = -55.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 5
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 80
+alignment = 1
+
+[node name="Local" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_hover_pressed_color = Color(0.588235, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.392157, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.784314, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 8
+theme_override_constants/icon_max_width = 60
+theme_override_fonts/font = ExtResource("2_h0ked")
+theme_override_font_sizes/font_size = 65
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_hvm6r")
+theme_override_styles/normal = SubResource("StyleBoxFlat_hvm6r")
+text = "Play - Local"
+icon = ExtResource("3_os52l")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Online" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_hover_pressed_color = Color(0.588235, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.392157, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.784314, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 8
+theme_override_constants/icon_max_width = 60
+theme_override_fonts/font = ExtResource("2_h0ked")
+theme_override_font_sizes/font_size = 65
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_hvm6r")
+theme_override_styles/normal = SubResource("StyleBoxFlat_hvm6r")
+text = "Play - Online"
+icon = ExtResource("3_os52l")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Options" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_hover_pressed_color = Color(0.588235, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.392157, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.784314, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 8
+theme_override_constants/icon_max_width = 60
+theme_override_fonts/font = ExtResource("2_h0ked")
+theme_override_font_sizes/font_size = 55
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_hvm6r")
+theme_override_styles/normal = SubResource("StyleBoxFlat_hvm6r")
+text = "Options"
+icon = ExtResource("3_os52l")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Exit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_hover_pressed_color = Color(0.588235, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.392157, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.784314, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 8
+theme_override_constants/icon_max_width = 60
+theme_override_fonts/font = ExtResource("2_h0ked")
+theme_override_font_sizes/font_size = 55
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_hvm6r")
+theme_override_styles/normal = SubResource("StyleBoxFlat_hvm6r")
+text = "Exit
+"
+icon = ExtResource("3_os52l")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Local" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Online" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Options" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0

@@ -1,0 +1,104 @@
+[gd_scene load_steps=9 format=3 uid="uid://c2dp0v4ge1dgo"]
+
+[ext_resource type="Script" path="res://addons/splash_screen_wizard/splash_screen.gd" id="1_7x81c"]
+[ext_resource type="Script" path="res://Scene/Menus/splash.gd" id="1_y36cb"]
+[ext_resource type="Script" path="res://addons/splash_screen_wizard/splash_screen_slide.gd" id="2_2qkob"]
+[ext_resource type="Script" path="res://addons/splash_screen_wizard/transitions/slide_transition_fade.gd" id="3_4t1kt"]
+[ext_resource type="Texture2D" uid="uid://ksmrl8ntvslw" path="res://Assets/Splash/Vertical Logo Tilted.png" id="4_cijbr"]
+[ext_resource type="Texture2D" uid="uid://4es7b6hxgta3" path="res://Assets/Splash/logo_remake.png" id="6_2hdbb"]
+
+[sub_resource type="Resource" id="Resource_7od0v"]
+script = ExtResource("3_4t1kt")
+fade_type = 0
+duration = 0.5
+transition_type = 0
+
+[sub_resource type="Resource" id="Resource_txw8n"]
+script = ExtResource("3_4t1kt")
+fade_type = 1
+duration = 0.5
+transition_type = 0
+
+[node name="Splash" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y36cb")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SplashScreen" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7x81c")
+
+[node name="SplashScreenSlide" type="Control" parent="SplashScreen"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_2qkob")
+transition_in = SubResource("Resource_7od0v")
+transition_out = SubResource("Resource_txw8n")
+
+[node name="TextureRect" type="TextureRect" parent="SplashScreen/SplashScreenSlide"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -238.0
+offset_top = -238.0
+offset_right = 238.0
+offset_bottom = 238.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_cijbr")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SplashScreenSlide2" type="Control" parent="SplashScreen"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_2qkob")
+transition_in = SubResource("Resource_7od0v")
+transition_out = SubResource("Resource_txw8n")
+
+[node name="TextureRect" type="TextureRect" parent="SplashScreen/SplashScreenSlide2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -418.0
+offset_top = -252.5
+offset_right = 418.0
+offset_bottom = 252.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_2hdbb")
+expand_mode = 1
+stretch_mode = 5
+
+[connection signal="finished" from="SplashScreen" to="." method="_on_splash_screen_finished"]
